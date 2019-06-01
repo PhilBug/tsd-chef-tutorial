@@ -26,4 +26,5 @@ suites:
   - name: default
     run_list:
       - recipe[tsd-chef::default]
+      - recipe[tsd-chef::apache]
     attributes:
