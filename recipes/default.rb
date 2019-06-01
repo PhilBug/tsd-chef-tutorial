@@ -30,3 +30,20 @@ file '/home/tsd/tsd-testfile' do
 
   action :create
 end
+
+(1..10).each do |n|
+  file "/home/tsd/file#{n}" do
+    content "This is an example content of file#{n}"
+    mode 0755
+    owner 'tsd'
+    group 'tsd'
+
+    action :create
+  end
+end
+
+package %w(python3 apache2) do
+  version ['3.5.1-3', '2.4.18-2ubuntu3.10']
+
+  action :install
+end
