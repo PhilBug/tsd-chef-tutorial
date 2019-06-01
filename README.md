@@ -28,3 +28,21 @@
 4. Install the following packages using package resource in one command:
     * 'python3' version 3.5.1-3
     * 'apache2' version 2.4.18-2ubuntu3.10
+
+## TASK 3:
+1. Create new recipe called apache.rb *(chef generate recipe apache)*
+2. Add newly created recipe to the runlist *(modify .kitchen.yml file)*
+3. Inside apache.rb start apache2 service, run chef
+4. Verify whether the server works, by entering the ip 192.168.35.10 through your browser
+5. Run *chef generate template welcome-page.erb*
+6. Download this https://pastebin.com/raw/pH8dckcZ file and save inside newly generated file
+7. Use template resource to:
+    - create file under path '/var/www/html/index.html'
+    - from source located under 'templates/welcome-page.erb'
+    - pass your name as variable in the following way:
+        ```ruby
+        variables(
+            name: 'Your name here'
+        )
+        ```
+8. Verify the result under 192.168.35.10
