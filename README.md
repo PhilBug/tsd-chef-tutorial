@@ -26,5 +26,6 @@
     * What did chef do?
     * What is the difference in the final chef-client summary when you run it once again without changing anything?
 4. Install the following packages using package resource in one command:
-    * 'python3' version 3.5.1-3
-    * 'apache2' version 2.4.18-2ubuntu3.10
+    * you need to update repositories by using *apt_update* resource or execute *apt-get update* command
+    * 'python3'
+    * 'apache2'
